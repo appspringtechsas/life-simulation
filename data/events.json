@@ -1,0 +1,170 @@
+[
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.185664",
+    "event_type": "birth",
+    "agent_id": "658f2efa-8614-441b-996e-e3019fea347f",
+    "agent_name": "Agent-658f2efa",
+    "details": {
+      "parent_ids": []
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.185693",
+    "event_type": "birth",
+    "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
+    "agent_name": "Agent-722074ba",
+    "details": {
+      "parent_ids": []
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.185713",
+    "event_type": "birth",
+    "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
+    "agent_name": "Agent-98fb1594",
+    "details": {
+      "parent_ids": []
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.185730",
+    "event_type": "birth",
+    "agent_id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
+    "agent_name": "Agent-6ee72149",
+    "details": {
+      "parent_ids": []
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.185747",
+    "event_type": "birth",
+    "agent_id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
+    "agent_name": "Agent-77e7a065",
+    "details": {
+      "parent_ids": []
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.186609",
+    "event_type": "tool_creation",
+    "agent_id": "658f2efa-8614-441b-996e-e3019fea347f",
+    "agent_name": "Agent-658f2efa",
+    "details": {
+      "tool_name": "custom_none_658f2efa"
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.186773",
+    "event_type": "tool_creation",
+    "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
+    "agent_name": "Agent-722074ba",
+    "details": {
+      "tool_name": "custom_none_722074ba"
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.186936",
+    "event_type": "birth",
+    "agent_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
+    "agent_name": "Agent-98fb1594-child",
+    "details": {
+      "parent_ids": [
+        "98fb1594-0b38-4df5-ade8-780b5eb5ba6d"
+      ]
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.186942",
+    "event_type": "reproduction",
+    "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
+    "agent_name": "Agent-98fb1594",
+    "details": {
+      "offspring_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.187058",
+    "event_type": "tool_creation",
+    "agent_id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
+    "agent_name": "Agent-6ee72149",
+    "details": {
+      "tool_name": "custom_none_6ee72149"
+    }
+  },
+  {
+    "turn": 0,
+    "timestamp": "2026-02-21T00:28:47.187407",
+    "event_type": "tool_creation",
+    "agent_id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
+    "agent_name": "Agent-77e7a065",
+    "details": {
+      "tool_name": "custom_none_77e7a065"
+    }
+  },
+  {
+    "turn": 1,
+    "timestamp": "2026-02-21T00:28:47.187917",
+    "event_type": "tool_creation",
+    "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
+    "agent_name": "Agent-98fb1594",
+    "details": {
+      "tool_name": "custom_none_98fb1594"
+    }
+  },
+  {
+    "turn": 1,
+    "timestamp": "2026-02-21T00:28:47.188283",
+    "event_type": "tool_creation",
+    "agent_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
+    "agent_name": "Agent-98fb1594-child",
+    "details": {
+      "tool_name": "custom_none_e40731f8"
+    }
+  },
+  {
+    "turn": 41,
+    "timestamp": "2026-02-21T00:28:47.208287",
+    "event_type": "birth",
+    "agent_id": "7af66989-a267-4c00-b778-717218c3530c",
+    "agent_name": "Agent-722074ba-child",
+    "details": {
+      "parent_ids": [
+        "722074ba-adfb-4877-8c77-42f3ac0a5166"
+      ]
+    }
+  },
+  {
+    "turn": 41,
+    "timestamp": "2026-02-21T00:28:47.208294",
+    "event_type": "reproduction",
+    "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
+    "agent_name": "Agent-722074ba",
+    "details": {
+      "offspring_id": "7af66989-a267-4c00-b778-717218c3530c",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 42,
+    "timestamp": "2026-02-21T00:28:47.209695",
+    "event_type": "tool_creation",
+    "agent_id": "7af66989-a267-4c00-b778-717218c3530c",
+    "agent_name": "Agent-722074ba-child",
+    "details": {
+      "tool_name": "custom_none_7af66989"
+    }
+  }
+]
