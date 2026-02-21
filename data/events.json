@@ -1,170 +1,388 @@
 [
   {
     "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.185664",
+    "timestamp": "2026-02-21T00:49:56.410681",
     "event_type": "birth",
-    "agent_id": "658f2efa-8614-441b-996e-e3019fea347f",
-    "agent_name": "Agent-658f2efa",
+    "agent_id": "6519791e-650e-4f08-90fc-3a46a936e0df",
+    "agent_name": "Agent-6519791e",
     "details": {
       "parent_ids": []
     }
   },
   {
     "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.185693",
+    "timestamp": "2026-02-21T00:49:56.410710",
     "event_type": "birth",
-    "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
-    "agent_name": "Agent-722074ba",
+    "agent_id": "de39fe44-80b7-4935-885c-b2ac43ced924",
+    "agent_name": "Agent-de39fe44",
     "details": {
       "parent_ids": []
     }
   },
   {
     "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.185713",
+    "timestamp": "2026-02-21T00:49:56.410731",
     "event_type": "birth",
-    "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
-    "agent_name": "Agent-98fb1594",
+    "agent_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+    "agent_name": "Agent-2f427d2d",
     "details": {
       "parent_ids": []
     }
   },
   {
     "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.185730",
+    "timestamp": "2026-02-21T00:49:56.410748",
     "event_type": "birth",
-    "agent_id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
-    "agent_name": "Agent-6ee72149",
+    "agent_id": "49ecb40c-945a-4088-92a7-4d0b24189ed5",
+    "agent_name": "Agent-49ecb40c",
     "details": {
       "parent_ids": []
     }
   },
   {
     "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.185747",
+    "timestamp": "2026-02-21T00:49:56.410767",
     "event_type": "birth",
-    "agent_id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
-    "agent_name": "Agent-77e7a065",
+    "agent_id": "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15",
+    "agent_name": "Agent-a1c8aad4",
     "details": {
       "parent_ids": []
     }
   },
   {
     "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.186609",
-    "event_type": "tool_creation",
-    "agent_id": "658f2efa-8614-441b-996e-e3019fea347f",
-    "agent_name": "Agent-658f2efa",
-    "details": {
-      "tool_name": "custom_none_658f2efa"
-    }
-  },
-  {
-    "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.186773",
-    "event_type": "tool_creation",
-    "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
-    "agent_name": "Agent-722074ba",
-    "details": {
-      "tool_name": "custom_none_722074ba"
-    }
-  },
-  {
-    "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.186936",
+    "timestamp": "2026-02-21T00:49:56.411668",
     "event_type": "birth",
-    "agent_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
-    "agent_name": "Agent-98fb1594-child",
+    "agent_id": "8b751398-f4d2-452b-9ccb-b3d242a4f899",
+    "agent_name": "Agent-49ecb40c-child",
     "details": {
       "parent_ids": [
-        "98fb1594-0b38-4df5-ade8-780b5eb5ba6d"
+        "49ecb40c-945a-4088-92a7-4d0b24189ed5"
       ]
     }
   },
   {
     "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.186942",
+    "timestamp": "2026-02-21T00:49:56.411672",
     "event_type": "reproduction",
-    "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
-    "agent_name": "Agent-98fb1594",
+    "agent_id": "49ecb40c-945a-4088-92a7-4d0b24189ed5",
+    "agent_name": "Agent-49ecb40c",
     "details": {
-      "offspring_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
+      "offspring_id": "8b751398-f4d2-452b-9ccb-b3d242a4f899",
       "energy_spent": 30,
       "resources_spent": 40
     }
   },
   {
-    "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.187058",
-    "event_type": "tool_creation",
-    "agent_id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
-    "agent_name": "Agent-6ee72149",
-    "details": {
-      "tool_name": "custom_none_6ee72149"
-    }
-  },
-  {
-    "turn": 0,
-    "timestamp": "2026-02-21T00:28:47.187407",
-    "event_type": "tool_creation",
-    "agent_id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
-    "agent_name": "Agent-77e7a065",
-    "details": {
-      "tool_name": "custom_none_77e7a065"
-    }
-  },
-  {
-    "turn": 1,
-    "timestamp": "2026-02-21T00:28:47.187917",
-    "event_type": "tool_creation",
-    "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
-    "agent_name": "Agent-98fb1594",
-    "details": {
-      "tool_name": "custom_none_98fb1594"
-    }
-  },
-  {
-    "turn": 1,
-    "timestamp": "2026-02-21T00:28:47.188283",
-    "event_type": "tool_creation",
-    "agent_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
-    "agent_name": "Agent-98fb1594-child",
-    "details": {
-      "tool_name": "custom_none_e40731f8"
-    }
-  },
-  {
-    "turn": 41,
-    "timestamp": "2026-02-21T00:28:47.208287",
+    "turn": 2,
+    "timestamp": "2026-02-21T00:49:56.412415",
     "event_type": "birth",
-    "agent_id": "7af66989-a267-4c00-b778-717218c3530c",
-    "agent_name": "Agent-722074ba-child",
+    "agent_id": "6e50a404-4927-45f9-bd8a-194b0e7064f9",
+    "agent_name": "Agent-49ecb40c-child",
     "details": {
       "parent_ids": [
-        "722074ba-adfb-4877-8c77-42f3ac0a5166"
+        "49ecb40c-945a-4088-92a7-4d0b24189ed5"
       ]
     }
   },
   {
-    "turn": 41,
-    "timestamp": "2026-02-21T00:28:47.208294",
+    "turn": 2,
+    "timestamp": "2026-02-21T00:49:56.412418",
     "event_type": "reproduction",
-    "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
-    "agent_name": "Agent-722074ba",
+    "agent_id": "49ecb40c-945a-4088-92a7-4d0b24189ed5",
+    "agent_name": "Agent-49ecb40c",
     "details": {
-      "offspring_id": "7af66989-a267-4c00-b778-717218c3530c",
+      "offspring_id": "6e50a404-4927-45f9-bd8a-194b0e7064f9",
       "energy_spent": 30,
       "resources_spent": 40
     }
   },
   {
-    "turn": 42,
-    "timestamp": "2026-02-21T00:28:47.209695",
-    "event_type": "tool_creation",
-    "agent_id": "7af66989-a267-4c00-b778-717218c3530c",
-    "agent_name": "Agent-722074ba-child",
+    "turn": 3,
+    "timestamp": "2026-02-21T00:49:56.412607",
+    "event_type": "birth",
+    "agent_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+    "agent_name": "Agent-6519791e-child",
     "details": {
-      "tool_name": "custom_none_7af66989"
+      "parent_ids": [
+        "6519791e-650e-4f08-90fc-3a46a936e0df"
+      ]
+    }
+  },
+  {
+    "turn": 3,
+    "timestamp": "2026-02-21T00:49:56.412610",
+    "event_type": "reproduction",
+    "agent_id": "6519791e-650e-4f08-90fc-3a46a936e0df",
+    "agent_name": "Agent-6519791e",
+    "details": {
+      "offspring_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 9,
+    "timestamp": "2026-02-21T00:49:56.417503",
+    "event_type": "birth",
+    "agent_id": "e5e4a127-54bc-45c2-b191-254428c64652",
+    "agent_name": "Agent-a1c8aad4-child",
+    "details": {
+      "parent_ids": [
+        "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15"
+      ]
+    }
+  },
+  {
+    "turn": 9,
+    "timestamp": "2026-02-21T00:49:56.417508",
+    "event_type": "reproduction",
+    "agent_id": "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15",
+    "agent_name": "Agent-a1c8aad4",
+    "details": {
+      "offspring_id": "e5e4a127-54bc-45c2-b191-254428c64652",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 13,
+    "timestamp": "2026-02-21T00:49:56.420887",
+    "event_type": "birth",
+    "agent_id": "e589a311-87d2-442b-bbe3-2f0c69ff90c5",
+    "agent_name": "Agent-de39fe44-child",
+    "details": {
+      "parent_ids": [
+        "de39fe44-80b7-4935-885c-b2ac43ced924"
+      ]
+    }
+  },
+  {
+    "turn": 13,
+    "timestamp": "2026-02-21T00:49:56.420893",
+    "event_type": "reproduction",
+    "agent_id": "de39fe44-80b7-4935-885c-b2ac43ced924",
+    "agent_name": "Agent-de39fe44",
+    "details": {
+      "offspring_id": "e589a311-87d2-442b-bbe3-2f0c69ff90c5",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 15,
+    "timestamp": "2026-02-21T00:49:56.423409",
+    "event_type": "birth",
+    "agent_id": "9e361bc0-104b-4766-89ab-72e4e1f16ea8",
+    "agent_name": "Agent-6519791e-child-child",
+    "details": {
+      "parent_ids": [
+        "3b2fdb46-af74-4408-b4b5-2187a872c354"
+      ]
+    }
+  },
+  {
+    "turn": 15,
+    "timestamp": "2026-02-21T00:49:56.423414",
+    "event_type": "reproduction",
+    "agent_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+    "agent_name": "Agent-6519791e-child",
+    "details": {
+      "offspring_id": "9e361bc0-104b-4766-89ab-72e4e1f16ea8",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 20,
+    "timestamp": "2026-02-21T00:49:56.428288",
+    "event_type": "birth",
+    "agent_id": "ba0a0c2f-1dfd-487f-9a2d-e677a3ed16de",
+    "agent_name": "Agent-2f427d2d-child",
+    "details": {
+      "parent_ids": [
+        "2f427d2d-5cb8-4599-8194-dca97f59e215"
+      ]
+    }
+  },
+  {
+    "turn": 20,
+    "timestamp": "2026-02-21T00:49:56.428294",
+    "event_type": "reproduction",
+    "agent_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+    "agent_name": "Agent-2f427d2d",
+    "details": {
+      "offspring_id": "ba0a0c2f-1dfd-487f-9a2d-e677a3ed16de",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 20,
+    "timestamp": "2026-02-21T00:49:56.428964",
+    "event_type": "birth",
+    "agent_id": "c09256da-e7fa-4fd4-9e00-6e2104e499df",
+    "agent_name": "Agent-a1c8aad4-child-child",
+    "details": {
+      "parent_ids": [
+        "e5e4a127-54bc-45c2-b191-254428c64652"
+      ]
+    }
+  },
+  {
+    "turn": 20,
+    "timestamp": "2026-02-21T00:49:56.428969",
+    "event_type": "reproduction",
+    "agent_id": "e5e4a127-54bc-45c2-b191-254428c64652",
+    "agent_name": "Agent-a1c8aad4-child",
+    "details": {
+      "offspring_id": "c09256da-e7fa-4fd4-9e00-6e2104e499df",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 23,
+    "timestamp": "2026-02-21T00:49:56.431027",
+    "event_type": "birth",
+    "agent_id": "feabfec6-1523-4da1-8b3f-e9377c00bfe4",
+    "agent_name": "Agent-a1c8aad4-child",
+    "details": {
+      "parent_ids": [
+        "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15"
+      ]
+    }
+  },
+  {
+    "turn": 23,
+    "timestamp": "2026-02-21T00:49:56.431031",
+    "event_type": "reproduction",
+    "agent_id": "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15",
+    "agent_name": "Agent-a1c8aad4",
+    "details": {
+      "offspring_id": "feabfec6-1523-4da1-8b3f-e9377c00bfe4",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 26,
+    "timestamp": "2026-02-21T00:49:56.434155",
+    "event_type": "birth",
+    "agent_id": "90309d5c-6fc5-4e88-aff6-84635b76727b",
+    "agent_name": "Agent-6519791e-child-child",
+    "details": {
+      "parent_ids": [
+        "3b2fdb46-af74-4408-b4b5-2187a872c354"
+      ]
+    }
+  },
+  {
+    "turn": 26,
+    "timestamp": "2026-02-21T00:49:56.434172",
+    "event_type": "reproduction",
+    "agent_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+    "agent_name": "Agent-6519791e-child",
+    "details": {
+      "offspring_id": "90309d5c-6fc5-4e88-aff6-84635b76727b",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 28,
+    "timestamp": "2026-02-21T00:49:56.436554",
+    "event_type": "birth",
+    "agent_id": "fe3f969f-74c1-4e24-87fc-bb9e50b7652a",
+    "agent_name": "Agent-2f427d2d-child",
+    "details": {
+      "parent_ids": [
+        "2f427d2d-5cb8-4599-8194-dca97f59e215"
+      ]
+    }
+  },
+  {
+    "turn": 28,
+    "timestamp": "2026-02-21T00:49:56.436560",
+    "event_type": "reproduction",
+    "agent_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+    "agent_name": "Agent-2f427d2d",
+    "details": {
+      "offspring_id": "fe3f969f-74c1-4e24-87fc-bb9e50b7652a",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 34,
+    "timestamp": "2026-02-21T00:49:56.444183",
+    "event_type": "birth",
+    "agent_id": "afc15c67-6df3-4bc2-9532-8a3988ef06a7",
+    "agent_name": "Agent-2f427d2d-child",
+    "details": {
+      "parent_ids": [
+        "2f427d2d-5cb8-4599-8194-dca97f59e215"
+      ]
+    }
+  },
+  {
+    "turn": 34,
+    "timestamp": "2026-02-21T00:49:56.444187",
+    "event_type": "reproduction",
+    "agent_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+    "agent_name": "Agent-2f427d2d",
+    "details": {
+      "offspring_id": "afc15c67-6df3-4bc2-9532-8a3988ef06a7",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 35,
+    "timestamp": "2026-02-21T00:49:56.445349",
+    "event_type": "birth",
+    "agent_id": "14cffebf-ec55-4d7f-9b2a-f193e09a9a41",
+    "agent_name": "Agent-6519791e-child-child",
+    "details": {
+      "parent_ids": [
+        "3b2fdb46-af74-4408-b4b5-2187a872c354"
+      ]
+    }
+  },
+  {
+    "turn": 35,
+    "timestamp": "2026-02-21T00:49:56.445354",
+    "event_type": "reproduction",
+    "agent_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+    "agent_name": "Agent-6519791e-child",
+    "details": {
+      "offspring_id": "14cffebf-ec55-4d7f-9b2a-f193e09a9a41",
+      "energy_spent": 30,
+      "resources_spent": 40
+    }
+  },
+  {
+    "turn": 37,
+    "timestamp": "2026-02-21T00:49:56.448348",
+    "event_type": "birth",
+    "agent_id": "55ba43eb-9c62-406d-8a35-000de23c7b04",
+    "agent_name": "Agent-a1c8aad4-child-child",
+    "details": {
+      "parent_ids": [
+        "e5e4a127-54bc-45c2-b191-254428c64652"
+      ]
+    }
+  },
+  {
+    "turn": 37,
+    "timestamp": "2026-02-21T00:49:56.448352",
+    "event_type": "reproduction",
+    "agent_id": "e5e4a127-54bc-45c2-b191-254428c64652",
+    "agent_name": "Agent-a1c8aad4-child",
+    "details": {
+      "offspring_id": "55ba43eb-9c62-406d-8a35-000de23c7b04",
+      "energy_spent": 30,
+      "resources_spent": 40
     }
   }
 ]

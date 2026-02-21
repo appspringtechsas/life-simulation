@@ -1,16 +1,18 @@
 {
   "current_turn": 49,
   "agents": {
-    "658f2efa-8614-441b-996e-e3019fea347f": {
-      "id": "658f2efa-8614-441b-996e-e3019fea347f",
-      "name": "Agent-658f2efa",
+    "6519791e-650e-4f08-90fc-3a46a936e0df": {
+      "id": "6519791e-650e-4f08-90fc-3a46a936e0df",
+      "name": "Agent-6519791e",
       "generation": 0,
       "energy": 99.0,
       "health": 100.0,
-      "resources": 12.06,
+      "resources": 36.79,
       "status": "alive",
       "parent_ids": [],
-      "children_ids": [],
+      "children_ids": [
+        "3b2fdb46-af74-4408-b4b5-2187a872c354"
+      ],
       "birth_turn": 0,
       "death_turn": null,
       "traits": {
@@ -22,45 +24,56 @@
       },
       "discovered_tools": [
         "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources"
+        "explore_new_tools",
+        "help_offspring",
+        "help_offspring",
+        "explore_new_tools"
       ],
       "memory": {}
     },
-    "722074ba-adfb-4877-8c77-42f3ac0a5166": {
-      "id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
-      "name": "Agent-722074ba",
+    "de39fe44-80b7-4935-885c-b2ac43ced924": {
+      "id": "de39fe44-80b7-4935-885c-b2ac43ced924",
+      "name": "Agent-de39fe44",
+      "generation": 0,
+      "energy": 99.0,
+      "health": 100.0,
+      "resources": 22.11,
+      "status": "alive",
+      "parent_ids": [],
+      "children_ids": [
+        "e589a311-87d2-442b-bbe3-2f0c69ff90c5"
+      ],
+      "birth_turn": 0,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "search_resources",
+        "help_offspring",
+        "explore_new_tools",
+        "help_offspring",
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "2f427d2d-5cb8-4599-8194-dca97f59e215": {
+      "id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+      "name": "Agent-2f427d2d",
       "generation": 0,
       "energy": 98.0,
       "health": 100.0,
-      "resources": 21.23,
+      "resources": 36.94,
       "status": "alive",
       "parent_ids": [],
       "children_ids": [
-        "7af66989-a267-4c00-b778-717218c3530c"
+        "ba0a0c2f-1dfd-487f-9a2d-e677a3ed16de",
+        "fe3f969f-74c1-4e24-87fc-bb9e50b7652a",
+        "afc15c67-6df3-4bc2-9532-8a3988ef06a7"
       ],
       "birth_turn": 0,
       "death_turn": null,
@@ -73,51 +86,27 @@
       },
       "discovered_tools": [
         "explore_new_tools",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
         "explore_new_tools",
         "search_resources",
         "search_resources",
         "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
         "explore_new_tools",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "help_offspring",
-        "search_resources"
+        "explore_new_tools"
       ],
       "memory": {}
     },
-    "98fb1594-0b38-4df5-ade8-780b5eb5ba6d": {
-      "id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
-      "name": "Agent-98fb1594",
+    "49ecb40c-945a-4088-92a7-4d0b24189ed5": {
+      "id": "49ecb40c-945a-4088-92a7-4d0b24189ed5",
+      "name": "Agent-49ecb40c",
       "generation": 0,
       "energy": 99.0,
       "health": 100.0,
-      "resources": 0.86,
+      "resources": 21.61,
       "status": "alive",
       "parent_ids": [],
       "children_ids": [
-        "e40731f8-86b0-4989-bc5c-6d625d845b4d"
+        "8b751398-f4d2-452b-9ccb-b3d242a4f899",
+        "6e50a404-4927-45f9-bd8a-194b0e7064f9"
       ],
       "birth_turn": 0,
       "death_turn": null,
@@ -129,156 +118,66 @@
         "cooperation_tendency": 0.5
       },
       "discovered_tools": [
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
         "search_resources",
         "search_resources",
         "help_offspring",
-        "search_resources",
-        "search_resources",
-        "search_resources",
+        "explore_new_tools",
+        "help_offspring",
+        "explore_new_tools",
+        "help_offspring",
+        "explore_new_tools",
+        "help_offspring"
+      ],
+      "memory": {}
+    },
+    "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15": {
+      "id": "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15",
+      "name": "Agent-a1c8aad4",
+      "generation": 0,
+      "energy": 99.0,
+      "health": 100.0,
+      "resources": 60.6,
+      "status": "alive",
+      "parent_ids": [],
+      "children_ids": [
+        "e5e4a127-54bc-45c2-b191-254428c64652",
+        "feabfec6-1523-4da1-8b3f-e9377c00bfe4"
+      ],
+      "birth_turn": 0,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "explore_new_tools",
         "search_resources",
         "help_offspring",
+        "help_offspring",
+        "help_offspring",
         "search_resources",
+        "explore_new_tools",
         "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
+        "explore_new_tools",
+        "help_offspring",
+        "help_offspring",
         "search_resources"
       ],
       "memory": {}
     },
-    "6ee72149-1589-44cf-a0f9-6cf9629c2bfe": {
-      "id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
-      "name": "Agent-6ee72149",
-      "generation": 0,
-      "energy": 99.0,
-      "health": 100.0,
-      "resources": 0.85,
-      "status": "alive",
-      "parent_ids": [],
-      "children_ids": [],
-      "birth_turn": 0,
-      "death_turn": null,
-      "traits": {
-        "energy_efficiency": 1.0,
-        "health_resistance": 1.0,
-        "reproduction_cost": 1.0,
-        "resource_affinity": 1.0,
-        "cooperation_tendency": 0.5
-      },
-      "discovered_tools": [
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "explore_new_tools",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "explore_new_tools",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources"
-      ],
-      "memory": {}
-    },
-    "77e7a065-d45a-4711-896c-e1b8d163b52e": {
-      "id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
-      "name": "Agent-77e7a065",
-      "generation": 0,
-      "energy": 99.0,
-      "health": 100.0,
-      "resources": 11.35,
-      "status": "alive",
-      "parent_ids": [],
-      "children_ids": [],
-      "birth_turn": 0,
-      "death_turn": null,
-      "traits": {
-        "energy_efficiency": 1.0,
-        "health_resistance": 1.0,
-        "reproduction_cost": 1.0,
-        "resource_affinity": 1.0,
-        "cooperation_tendency": 0.5
-      },
-      "discovered_tools": [
-        "explore_new_tools",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "explore_new_tools",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources"
-      ],
-      "memory": {}
-    },
-    "e40731f8-86b0-4989-bc5c-6d625d845b4d": {
-      "id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
-      "name": "Agent-98fb1594-child",
+    "8b751398-f4d2-452b-9ccb-b3d242a4f899": {
+      "id": "8b751398-f4d2-452b-9ccb-b3d242a4f899",
+      "name": "Agent-49ecb40c-child",
       "generation": 1,
-      "energy": 98.0,
+      "energy": 99.0,
       "health": 100.0,
-      "resources": 15.52,
+      "resources": 50.0,
       "status": "alive",
       "parent_ids": [
-        "98fb1594-0b38-4df5-ade8-780b5eb5ba6d"
+        "49ecb40c-945a-4088-92a7-4d0b24189ed5"
       ],
       "children_ids": [],
       "birth_turn": 0,
@@ -291,53 +190,133 @@
         "cooperation_tendency": 0.5
       },
       "discovered_tools": [
+        "help_parent",
+        "explore_new_tools",
+        "help_parent"
+      ],
+      "memory": {}
+    },
+    "6e50a404-4927-45f9-bd8a-194b0e7064f9": {
+      "id": "6e50a404-4927-45f9-bd8a-194b0e7064f9",
+      "name": "Agent-49ecb40c-child",
+      "generation": 1,
+      "energy": 99.0,
+      "health": 80.0,
+      "resources": 34.69,
+      "status": "alive",
+      "parent_ids": [
+        "49ecb40c-945a-4088-92a7-4d0b24189ed5"
+      ],
+      "children_ids": [],
+      "birth_turn": 2,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "help_parent",
+        "search_resources",
+        "explore_new_tools",
+        "explore_new_tools",
+        "help_parent",
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "3b2fdb46-af74-4408-b4b5-2187a872c354": {
+      "id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+      "name": "Agent-6519791e-child",
+      "generation": 1,
+      "energy": 99.0,
+      "health": 100.0,
+      "resources": 52.16,
+      "status": "alive",
+      "parent_ids": [
+        "6519791e-650e-4f08-90fc-3a46a936e0df"
+      ],
+      "children_ids": [
+        "9e361bc0-104b-4766-89ab-72e4e1f16ea8",
+        "90309d5c-6fc5-4e88-aff6-84635b76727b",
+        "14cffebf-ec55-4d7f-9b2a-f193e09a9a41"
+      ],
+      "birth_turn": 3,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "help_parent",
+        "search_resources",
         "search_resources",
         "help_parent",
         "search_resources",
         "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "explore_new_tools",
-        "explore_new_tools",
-        "explore_new_tools",
-        "search_resources",
-        "search_resources",
-        "search_resources",
-        "search_resources"
+        "help_parent"
       ],
       "memory": {}
     },
-    "7af66989-a267-4c00-b778-717218c3530c": {
-      "id": "7af66989-a267-4c00-b778-717218c3530c",
-      "name": "Agent-722074ba-child",
+    "e5e4a127-54bc-45c2-b191-254428c64652": {
+      "id": "e5e4a127-54bc-45c2-b191-254428c64652",
+      "name": "Agent-a1c8aad4-child",
       "generation": 1,
-      "energy": 98.0,
-      "health": 90.0,
-      "resources": 23.8,
+      "energy": 99.0,
+      "health": 100.0,
+      "resources": 50.84,
       "status": "alive",
       "parent_ids": [
-        "722074ba-adfb-4877-8c77-42f3ac0a5166"
+        "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15"
+      ],
+      "children_ids": [
+        "c09256da-e7fa-4fd4-9e00-6e2104e499df",
+        "55ba43eb-9c62-406d-8a35-000de23c7b04"
+      ],
+      "birth_turn": 9,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0276897862015655,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "explore_new_tools",
+        "help_parent",
+        "search_resources",
+        "help_parent",
+        "explore_new_tools",
+        "help_offspring",
+        "explore_new_tools",
+        "search_resources",
+        "explore_new_tools",
+        "help_parent",
+        "explore_new_tools",
+        "help_offspring",
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "e589a311-87d2-442b-bbe3-2f0c69ff90c5": {
+      "id": "e589a311-87d2-442b-bbe3-2f0c69ff90c5",
+      "name": "Agent-de39fe44-child",
+      "generation": 1,
+      "energy": 99.0,
+      "health": 100.0,
+      "resources": 35.0,
+      "status": "alive",
+      "parent_ids": [
+        "de39fe44-80b7-4935-885c-b2ac43ced924"
       ],
       "children_ids": [],
-      "birth_turn": 41,
+      "birth_turn": 13,
       "death_turn": null,
       "traits": {
         "energy_efficiency": 1.0,
@@ -347,10 +326,258 @@
         "cooperation_tendency": 0.5
       },
       "discovered_tools": [
+        "explore_new_tools",
+        "help_parent",
+        "explore_new_tools",
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "9e361bc0-104b-4766-89ab-72e4e1f16ea8": {
+      "id": "9e361bc0-104b-4766-89ab-72e4e1f16ea8",
+      "name": "Agent-6519791e-child-child",
+      "generation": 2,
+      "energy": 99.0,
+      "health": 80.0,
+      "resources": 20.0,
+      "status": "alive",
+      "parent_ids": [
+        "3b2fdb46-af74-4408-b4b5-2187a872c354"
+      ],
+      "children_ids": [],
+      "birth_turn": 15,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "ba0a0c2f-1dfd-487f-9a2d-e677a3ed16de": {
+      "id": "ba0a0c2f-1dfd-487f-9a2d-e677a3ed16de",
+      "name": "Agent-2f427d2d-child",
+      "generation": 1,
+      "energy": 99.0,
+      "health": 80.0,
+      "resources": 20.0,
+      "status": "alive",
+      "parent_ids": [
+        "2f427d2d-5cb8-4599-8194-dca97f59e215"
+      ],
+      "children_ids": [],
+      "birth_turn": 20,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "c09256da-e7fa-4fd4-9e00-6e2104e499df": {
+      "id": "c09256da-e7fa-4fd4-9e00-6e2104e499df",
+      "name": "Agent-a1c8aad4-child-child",
+      "generation": 2,
+      "energy": 99.0,
+      "health": 100.0,
+      "resources": 45.3,
+      "status": "alive",
+      "parent_ids": [
+        "e5e4a127-54bc-45c2-b191-254428c64652"
+      ],
+      "children_ids": [],
+      "birth_turn": 20,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0276897862015655,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "help_parent",
+        "help_parent",
+        "help_parent",
         "search_resources",
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "feabfec6-1523-4da1-8b3f-e9377c00bfe4": {
+      "id": "feabfec6-1523-4da1-8b3f-e9377c00bfe4",
+      "name": "Agent-a1c8aad4-child",
+      "generation": 1,
+      "energy": 98.0,
+      "health": 80.0,
+      "resources": 62.26,
+      "status": "alive",
+      "parent_ids": [
+        "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15"
+      ],
+      "children_ids": [],
+      "birth_turn": 23,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "help_parent",
         "search_resources",
-        "search_resources",
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "90309d5c-6fc5-4e88-aff6-84635b76727b": {
+      "id": "90309d5c-6fc5-4e88-aff6-84635b76727b",
+      "name": "Agent-6519791e-child-child",
+      "generation": 2,
+      "energy": 97.0,
+      "health": 80.0,
+      "resources": 57.23,
+      "status": "alive",
+      "parent_ids": [
+        "3b2fdb46-af74-4408-b4b5-2187a872c354"
+      ],
+      "children_ids": [],
+      "birth_turn": 26,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "help_parent",
         "search_resources"
+      ],
+      "memory": {}
+    },
+    "fe3f969f-74c1-4e24-87fc-bb9e50b7652a": {
+      "id": "fe3f969f-74c1-4e24-87fc-bb9e50b7652a",
+      "name": "Agent-2f427d2d-child",
+      "generation": 1,
+      "energy": 99.0,
+      "health": 80.0,
+      "resources": 20.0,
+      "status": "alive",
+      "parent_ids": [
+        "2f427d2d-5cb8-4599-8194-dca97f59e215"
+      ],
+      "children_ids": [],
+      "birth_turn": 28,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 0.9181916462873217,
+        "cooperation_tendency": 0.4546204100279492
+      },
+      "discovered_tools": [
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "afc15c67-6df3-4bc2-9532-8a3988ef06a7": {
+      "id": "afc15c67-6df3-4bc2-9532-8a3988ef06a7",
+      "name": "Agent-2f427d2d-child",
+      "generation": 1,
+      "energy": 96.0,
+      "health": 80.0,
+      "resources": 36.13,
+      "status": "alive",
+      "parent_ids": [
+        "2f427d2d-5cb8-4599-8194-dca97f59e215"
+      ],
+      "children_ids": [],
+      "birth_turn": 34,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "help_parent",
+        "search_resources",
+        "explore_new_tools"
+      ],
+      "memory": {}
+    },
+    "14cffebf-ec55-4d7f-9b2a-f193e09a9a41": {
+      "id": "14cffebf-ec55-4d7f-9b2a-f193e09a9a41",
+      "name": "Agent-6519791e-child-child",
+      "generation": 2,
+      "energy": 97.1,
+      "health": 80.0,
+      "resources": 32.7,
+      "status": "alive",
+      "parent_ids": [
+        "3b2fdb46-af74-4408-b4b5-2187a872c354"
+      ],
+      "children_ids": [],
+      "birth_turn": 35,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0352258758502424,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "explore_new_tools",
+        "help_parent",
+        "search_resources",
+        "explore_new_tools",
+        "help_parent"
+      ],
+      "memory": {}
+    },
+    "55ba43eb-9c62-406d-8a35-000de23c7b04": {
+      "id": "55ba43eb-9c62-406d-8a35-000de23c7b04",
+      "name": "Agent-a1c8aad4-child-child",
+      "generation": 2,
+      "energy": 98.0,
+      "health": 80.0,
+      "resources": 15.0,
+      "status": "alive",
+      "parent_ids": [
+        "e5e4a127-54bc-45c2-b191-254428c64652"
+      ],
+      "children_ids": [],
+      "birth_turn": 37,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0276897862015655,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.1361349507663454,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [
+        "explore_new_tools",
+        "help_parent"
       ],
       "memory": {}
     }
@@ -369,170 +596,388 @@
   "events": [
     {
       "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.185664",
+      "timestamp": "2026-02-21T00:49:56.410681",
       "event_type": "birth",
-      "agent_id": "658f2efa-8614-441b-996e-e3019fea347f",
-      "agent_name": "Agent-658f2efa",
+      "agent_id": "6519791e-650e-4f08-90fc-3a46a936e0df",
+      "agent_name": "Agent-6519791e",
       "details": {
         "parent_ids": []
       }
     },
     {
       "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.185693",
+      "timestamp": "2026-02-21T00:49:56.410710",
       "event_type": "birth",
-      "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
-      "agent_name": "Agent-722074ba",
+      "agent_id": "de39fe44-80b7-4935-885c-b2ac43ced924",
+      "agent_name": "Agent-de39fe44",
       "details": {
         "parent_ids": []
       }
     },
     {
       "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.185713",
+      "timestamp": "2026-02-21T00:49:56.410731",
       "event_type": "birth",
-      "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
-      "agent_name": "Agent-98fb1594",
+      "agent_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+      "agent_name": "Agent-2f427d2d",
       "details": {
         "parent_ids": []
       }
     },
     {
       "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.185730",
+      "timestamp": "2026-02-21T00:49:56.410748",
       "event_type": "birth",
-      "agent_id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
-      "agent_name": "Agent-6ee72149",
+      "agent_id": "49ecb40c-945a-4088-92a7-4d0b24189ed5",
+      "agent_name": "Agent-49ecb40c",
       "details": {
         "parent_ids": []
       }
     },
     {
       "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.185747",
+      "timestamp": "2026-02-21T00:49:56.410767",
       "event_type": "birth",
-      "agent_id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
-      "agent_name": "Agent-77e7a065",
+      "agent_id": "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15",
+      "agent_name": "Agent-a1c8aad4",
       "details": {
         "parent_ids": []
       }
     },
     {
       "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.186609",
-      "event_type": "tool_creation",
-      "agent_id": "658f2efa-8614-441b-996e-e3019fea347f",
-      "agent_name": "Agent-658f2efa",
-      "details": {
-        "tool_name": "custom_none_658f2efa"
-      }
-    },
-    {
-      "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.186773",
-      "event_type": "tool_creation",
-      "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
-      "agent_name": "Agent-722074ba",
-      "details": {
-        "tool_name": "custom_none_722074ba"
-      }
-    },
-    {
-      "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.186936",
+      "timestamp": "2026-02-21T00:49:56.411668",
       "event_type": "birth",
-      "agent_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
-      "agent_name": "Agent-98fb1594-child",
+      "agent_id": "8b751398-f4d2-452b-9ccb-b3d242a4f899",
+      "agent_name": "Agent-49ecb40c-child",
       "details": {
         "parent_ids": [
-          "98fb1594-0b38-4df5-ade8-780b5eb5ba6d"
+          "49ecb40c-945a-4088-92a7-4d0b24189ed5"
         ]
       }
     },
     {
       "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.186942",
+      "timestamp": "2026-02-21T00:49:56.411672",
       "event_type": "reproduction",
-      "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
-      "agent_name": "Agent-98fb1594",
+      "agent_id": "49ecb40c-945a-4088-92a7-4d0b24189ed5",
+      "agent_name": "Agent-49ecb40c",
       "details": {
-        "offspring_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
+        "offspring_id": "8b751398-f4d2-452b-9ccb-b3d242a4f899",
         "energy_spent": 30,
         "resources_spent": 40
       }
     },
     {
-      "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.187058",
-      "event_type": "tool_creation",
-      "agent_id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
-      "agent_name": "Agent-6ee72149",
-      "details": {
-        "tool_name": "custom_none_6ee72149"
-      }
-    },
-    {
-      "turn": 0,
-      "timestamp": "2026-02-21T00:28:47.187407",
-      "event_type": "tool_creation",
-      "agent_id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
-      "agent_name": "Agent-77e7a065",
-      "details": {
-        "tool_name": "custom_none_77e7a065"
-      }
-    },
-    {
-      "turn": 1,
-      "timestamp": "2026-02-21T00:28:47.187917",
-      "event_type": "tool_creation",
-      "agent_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
-      "agent_name": "Agent-98fb1594",
-      "details": {
-        "tool_name": "custom_none_98fb1594"
-      }
-    },
-    {
-      "turn": 1,
-      "timestamp": "2026-02-21T00:28:47.188283",
-      "event_type": "tool_creation",
-      "agent_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
-      "agent_name": "Agent-98fb1594-child",
-      "details": {
-        "tool_name": "custom_none_e40731f8"
-      }
-    },
-    {
-      "turn": 41,
-      "timestamp": "2026-02-21T00:28:47.208287",
+      "turn": 2,
+      "timestamp": "2026-02-21T00:49:56.412415",
       "event_type": "birth",
-      "agent_id": "7af66989-a267-4c00-b778-717218c3530c",
-      "agent_name": "Agent-722074ba-child",
+      "agent_id": "6e50a404-4927-45f9-bd8a-194b0e7064f9",
+      "agent_name": "Agent-49ecb40c-child",
       "details": {
         "parent_ids": [
-          "722074ba-adfb-4877-8c77-42f3ac0a5166"
+          "49ecb40c-945a-4088-92a7-4d0b24189ed5"
         ]
       }
     },
     {
-      "turn": 41,
-      "timestamp": "2026-02-21T00:28:47.208294",
+      "turn": 2,
+      "timestamp": "2026-02-21T00:49:56.412418",
       "event_type": "reproduction",
-      "agent_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
-      "agent_name": "Agent-722074ba",
+      "agent_id": "49ecb40c-945a-4088-92a7-4d0b24189ed5",
+      "agent_name": "Agent-49ecb40c",
       "details": {
-        "offspring_id": "7af66989-a267-4c00-b778-717218c3530c",
+        "offspring_id": "6e50a404-4927-45f9-bd8a-194b0e7064f9",
         "energy_spent": 30,
         "resources_spent": 40
       }
     },
     {
-      "turn": 42,
-      "timestamp": "2026-02-21T00:28:47.209695",
-      "event_type": "tool_creation",
-      "agent_id": "7af66989-a267-4c00-b778-717218c3530c",
-      "agent_name": "Agent-722074ba-child",
+      "turn": 3,
+      "timestamp": "2026-02-21T00:49:56.412607",
+      "event_type": "birth",
+      "agent_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+      "agent_name": "Agent-6519791e-child",
       "details": {
-        "tool_name": "custom_none_7af66989"
+        "parent_ids": [
+          "6519791e-650e-4f08-90fc-3a46a936e0df"
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "2026-02-21T00:49:56.412610",
+      "event_type": "reproduction",
+      "agent_id": "6519791e-650e-4f08-90fc-3a46a936e0df",
+      "agent_name": "Agent-6519791e",
+      "details": {
+        "offspring_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "2026-02-21T00:49:56.417503",
+      "event_type": "birth",
+      "agent_id": "e5e4a127-54bc-45c2-b191-254428c64652",
+      "agent_name": "Agent-a1c8aad4-child",
+      "details": {
+        "parent_ids": [
+          "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15"
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "2026-02-21T00:49:56.417508",
+      "event_type": "reproduction",
+      "agent_id": "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15",
+      "agent_name": "Agent-a1c8aad4",
+      "details": {
+        "offspring_id": "e5e4a127-54bc-45c2-b191-254428c64652",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "2026-02-21T00:49:56.420887",
+      "event_type": "birth",
+      "agent_id": "e589a311-87d2-442b-bbe3-2f0c69ff90c5",
+      "agent_name": "Agent-de39fe44-child",
+      "details": {
+        "parent_ids": [
+          "de39fe44-80b7-4935-885c-b2ac43ced924"
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "2026-02-21T00:49:56.420893",
+      "event_type": "reproduction",
+      "agent_id": "de39fe44-80b7-4935-885c-b2ac43ced924",
+      "agent_name": "Agent-de39fe44",
+      "details": {
+        "offspring_id": "e589a311-87d2-442b-bbe3-2f0c69ff90c5",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "2026-02-21T00:49:56.423409",
+      "event_type": "birth",
+      "agent_id": "9e361bc0-104b-4766-89ab-72e4e1f16ea8",
+      "agent_name": "Agent-6519791e-child-child",
+      "details": {
+        "parent_ids": [
+          "3b2fdb46-af74-4408-b4b5-2187a872c354"
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "2026-02-21T00:49:56.423414",
+      "event_type": "reproduction",
+      "agent_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+      "agent_name": "Agent-6519791e-child",
+      "details": {
+        "offspring_id": "9e361bc0-104b-4766-89ab-72e4e1f16ea8",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "2026-02-21T00:49:56.428288",
+      "event_type": "birth",
+      "agent_id": "ba0a0c2f-1dfd-487f-9a2d-e677a3ed16de",
+      "agent_name": "Agent-2f427d2d-child",
+      "details": {
+        "parent_ids": [
+          "2f427d2d-5cb8-4599-8194-dca97f59e215"
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "2026-02-21T00:49:56.428294",
+      "event_type": "reproduction",
+      "agent_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+      "agent_name": "Agent-2f427d2d",
+      "details": {
+        "offspring_id": "ba0a0c2f-1dfd-487f-9a2d-e677a3ed16de",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "2026-02-21T00:49:56.428964",
+      "event_type": "birth",
+      "agent_id": "c09256da-e7fa-4fd4-9e00-6e2104e499df",
+      "agent_name": "Agent-a1c8aad4-child-child",
+      "details": {
+        "parent_ids": [
+          "e5e4a127-54bc-45c2-b191-254428c64652"
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "2026-02-21T00:49:56.428969",
+      "event_type": "reproduction",
+      "agent_id": "e5e4a127-54bc-45c2-b191-254428c64652",
+      "agent_name": "Agent-a1c8aad4-child",
+      "details": {
+        "offspring_id": "c09256da-e7fa-4fd4-9e00-6e2104e499df",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "2026-02-21T00:49:56.431027",
+      "event_type": "birth",
+      "agent_id": "feabfec6-1523-4da1-8b3f-e9377c00bfe4",
+      "agent_name": "Agent-a1c8aad4-child",
+      "details": {
+        "parent_ids": [
+          "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15"
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "2026-02-21T00:49:56.431031",
+      "event_type": "reproduction",
+      "agent_id": "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15",
+      "agent_name": "Agent-a1c8aad4",
+      "details": {
+        "offspring_id": "feabfec6-1523-4da1-8b3f-e9377c00bfe4",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 26,
+      "timestamp": "2026-02-21T00:49:56.434155",
+      "event_type": "birth",
+      "agent_id": "90309d5c-6fc5-4e88-aff6-84635b76727b",
+      "agent_name": "Agent-6519791e-child-child",
+      "details": {
+        "parent_ids": [
+          "3b2fdb46-af74-4408-b4b5-2187a872c354"
+        ]
+      }
+    },
+    {
+      "turn": 26,
+      "timestamp": "2026-02-21T00:49:56.434172",
+      "event_type": "reproduction",
+      "agent_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+      "agent_name": "Agent-6519791e-child",
+      "details": {
+        "offspring_id": "90309d5c-6fc5-4e88-aff6-84635b76727b",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 28,
+      "timestamp": "2026-02-21T00:49:56.436554",
+      "event_type": "birth",
+      "agent_id": "fe3f969f-74c1-4e24-87fc-bb9e50b7652a",
+      "agent_name": "Agent-2f427d2d-child",
+      "details": {
+        "parent_ids": [
+          "2f427d2d-5cb8-4599-8194-dca97f59e215"
+        ]
+      }
+    },
+    {
+      "turn": 28,
+      "timestamp": "2026-02-21T00:49:56.436560",
+      "event_type": "reproduction",
+      "agent_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+      "agent_name": "Agent-2f427d2d",
+      "details": {
+        "offspring_id": "fe3f969f-74c1-4e24-87fc-bb9e50b7652a",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 34,
+      "timestamp": "2026-02-21T00:49:56.444183",
+      "event_type": "birth",
+      "agent_id": "afc15c67-6df3-4bc2-9532-8a3988ef06a7",
+      "agent_name": "Agent-2f427d2d-child",
+      "details": {
+        "parent_ids": [
+          "2f427d2d-5cb8-4599-8194-dca97f59e215"
+        ]
+      }
+    },
+    {
+      "turn": 34,
+      "timestamp": "2026-02-21T00:49:56.444187",
+      "event_type": "reproduction",
+      "agent_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
+      "agent_name": "Agent-2f427d2d",
+      "details": {
+        "offspring_id": "afc15c67-6df3-4bc2-9532-8a3988ef06a7",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 35,
+      "timestamp": "2026-02-21T00:49:56.445349",
+      "event_type": "birth",
+      "agent_id": "14cffebf-ec55-4d7f-9b2a-f193e09a9a41",
+      "agent_name": "Agent-6519791e-child-child",
+      "details": {
+        "parent_ids": [
+          "3b2fdb46-af74-4408-b4b5-2187a872c354"
+        ]
+      }
+    },
+    {
+      "turn": 35,
+      "timestamp": "2026-02-21T00:49:56.445354",
+      "event_type": "reproduction",
+      "agent_id": "3b2fdb46-af74-4408-b4b5-2187a872c354",
+      "agent_name": "Agent-6519791e-child",
+      "details": {
+        "offspring_id": "14cffebf-ec55-4d7f-9b2a-f193e09a9a41",
+        "energy_spent": 30,
+        "resources_spent": 40
+      }
+    },
+    {
+      "turn": 37,
+      "timestamp": "2026-02-21T00:49:56.448348",
+      "event_type": "birth",
+      "agent_id": "55ba43eb-9c62-406d-8a35-000de23c7b04",
+      "agent_name": "Agent-a1c8aad4-child-child",
+      "details": {
+        "parent_ids": [
+          "e5e4a127-54bc-45c2-b191-254428c64652"
+        ]
+      }
+    },
+    {
+      "turn": 37,
+      "timestamp": "2026-02-21T00:49:56.448352",
+      "event_type": "reproduction",
+      "agent_id": "e5e4a127-54bc-45c2-b191-254428c64652",
+      "agent_name": "Agent-a1c8aad4-child",
+      "details": {
+        "offspring_id": "55ba43eb-9c62-406d-8a35-000de23c7b04",
+        "energy_spent": 30,
+        "resources_spent": 40
       }
     }
   ],
@@ -552,7 +997,7 @@
       },
       "creator_id": null,
       "enabled": true,
-      "execution_count": 170
+      "execution_count": 23
     },
     {
       "name": "consume_energy",
@@ -599,7 +1044,7 @@
       },
       "creator_id": null,
       "enabled": true,
-      "execution_count": 3
+      "execution_count": 15
     },
     {
       "name": "help_parent",
@@ -616,7 +1061,7 @@
       },
       "creator_id": null,
       "enabled": true,
-      "execution_count": 1
+      "execution_count": 20
     },
     {
       "name": "explore_new_tools",
@@ -629,7 +1074,7 @@
       },
       "creator_id": null,
       "enabled": true,
-      "execution_count": 10
+      "execution_count": 36
     },
     {
       "name": "get_agent_state",
@@ -648,98 +1093,82 @@
       "execution_count": 0
     },
     {
-      "name": "custom_none_658f2efa",
-      "description": "Custom tool created by Agent-658f2efa",
+      "name": "advanced_search_e5e4a1",
+      "description": "Tool discovered by Agent-a1c8aad4-child",
       "parameters": {},
-      "creator_id": "658f2efa-8614-441b-996e-e3019fea347f",
+      "creator_id": "e5e4a127-54bc-45c2-b191-254428c64652",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "custom_none_722074ba",
-      "description": "Custom tool created by Agent-722074ba",
+      "name": "resource_conversion_49ecb4",
+      "description": "Tool discovered by Agent-49ecb40c",
       "parameters": {},
-      "creator_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
+      "creator_id": "49ecb40c-945a-4088-92a7-4d0b24189ed5",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "custom_none_6ee72149",
-      "description": "Custom tool created by Agent-6ee72149",
+      "name": "data_analysis_a1c8aa",
+      "description": "Tool discovered by Agent-a1c8aad4",
       "parameters": {},
-      "creator_id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
+      "creator_id": "a1c8aad4-3cf4-4585-9d25-a49f42bd9d15",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "custom_none_77e7a065",
-      "description": "Custom tool created by Agent-77e7a065",
+      "name": "data_analysis_e5e4a1",
+      "description": "Tool discovered by Agent-a1c8aad4-child",
       "parameters": {},
-      "creator_id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
+      "creator_id": "e5e4a127-54bc-45c2-b191-254428c64652",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "health_boost_722074",
-      "description": "Tool discovered by Agent-722074ba",
+      "name": "advanced_search_de39fe",
+      "description": "Tool discovered by Agent-de39fe44",
       "parameters": {},
-      "creator_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
+      "creator_id": "de39fe44-80b7-4935-885c-b2ac43ced924",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "custom_none_98fb1594",
-      "description": "Custom tool created by Agent-98fb1594",
+      "name": "resource_conversion_6e50a4",
+      "description": "Tool discovered by Agent-49ecb40c-child",
       "parameters": {},
-      "creator_id": "98fb1594-0b38-4df5-ade8-780b5eb5ba6d",
+      "creator_id": "6e50a404-4927-45f9-bd8a-194b0e7064f9",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "custom_none_e40731f8",
-      "description": "Custom tool created by Agent-98fb1594-child",
+      "name": "resource_conversion_e589a3",
+      "description": "Tool discovered by Agent-de39fe44-child",
       "parameters": {},
-      "creator_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
+      "creator_id": "e589a311-87d2-442b-bbe3-2f0c69ff90c5",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "advanced_search_722074",
-      "description": "Tool discovered by Agent-722074ba",
+      "name": "resource_conversion_e5e4a1",
+      "description": "Tool discovered by Agent-a1c8aad4-child",
       "parameters": {},
-      "creator_id": "722074ba-adfb-4877-8c77-42f3ac0a5166",
+      "creator_id": "e5e4a127-54bc-45c2-b191-254428c64652",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "resource_conversion_77e7a0",
-      "description": "Tool discovered by Agent-77e7a065",
+      "name": "data_analysis_14cffe",
+      "description": "Tool discovered by Agent-6519791e-child-child",
       "parameters": {},
-      "creator_id": "77e7a065-d45a-4711-896c-e1b8d163b52e",
+      "creator_id": "14cffebf-ec55-4d7f-9b2a-f193e09a9a41",
       "enabled": true,
       "execution_count": 0
     },
     {
-      "name": "advanced_search_6ee721",
-      "description": "Tool discovered by Agent-6ee72149",
+      "name": "data_analysis_2f427d",
+      "description": "Tool discovered by Agent-2f427d2d",
       "parameters": {},
-      "creator_id": "6ee72149-1589-44cf-a0f9-6cf9629c2bfe",
-      "enabled": true,
-      "execution_count": 0
-    },
-    {
-      "name": "custom_none_7af66989",
-      "description": "Custom tool created by Agent-722074ba-child",
-      "parameters": {},
-      "creator_id": "7af66989-a267-4c00-b778-717218c3530c",
-      "enabled": true,
-      "execution_count": 0
-    },
-    {
-      "name": "data_analysis_e40731",
-      "description": "Tool discovered by Agent-98fb1594-child",
-      "parameters": {},
-      "creator_id": "e40731f8-86b0-4989-bc5c-6d625d845b4d",
+      "creator_id": "2f427d2d-5cb8-4599-8194-dca97f59e215",
       "enabled": true,
       "execution_count": 0
     }
