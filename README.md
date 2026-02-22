@@ -36,6 +36,22 @@ A complete artificial life simulation system where autonomous agents navigate a 
 - **Decision Making**: Free-form reasoning and action selection
 - **Tool Selection**: Agents choose which tools to use for their goals
 
+### Gemini (Google) example
+
+Set the API key and call a Gemini model by passing the model name to `get_response`:
+
+```bash
+# Linux / macOS
+export GOOGLE_API_KEY=your_key_here
+# PowerShell (Windows)
+$env:GOOGLE_API_KEY='your_key_here'
+```
+
+```python
+# use a Gemini model
+response = llm_agent.get_response(agent, environment, model='gemini-1.0')
+```
+
 ## 📁 Project Structure
 
 ```

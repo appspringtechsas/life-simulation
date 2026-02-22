@@ -2,6 +2,7 @@
 from typing import Dict, List, Any, Optional, Tuple
 import json
 import re
+import os
 
 from src.agents import Agent
 from src.environment import Environment
@@ -90,6 +91,141 @@ to adapt. Good luck!"""
             else:
                 lines.append(f"{prefix}{key}: {value}")
         return "\n".join(lines)
+
+    def get_response(self, agent: Agent, environment: Environment, model: str = "gpt-3.5-turbo") -> str:
+        """
+        Build a prompt for an agent and call an external LLM (OpenAI by default).
+        Raises a RuntimeError when the OpenAI package or API is not available so callers
+        can fall back to the internal simulator.
+        """
+        prompt = self.build_agent_prompt(agent, environment)
+        system_prompt = self.get_system_prompt()
+
+        # Helper to attempt many common response shapes (OpenAI, Gemini, genai, etc.)
+        def _extract_text(resp_obj) -> str:
+            # dict-like access
+            try:
+                if isinstance(resp_obj, dict):
+                    # OpenAI ChatCompletion
+                    if "choices" in resp_obj:
+                        try:
+                            return resp_obj["choices"][0]["message"]["content"]
+                        except Exception:
+                            pass
+                    # Gemini / genai -> candidates
+                    if "candidates" in resp_obj:
+                        cand = resp_obj["candidates"][0]
+                        if isinstance(cand, dict) and "content" in cand:
+                            return cand["content"]
+                        # some responses embed output
+                    if "output" in resp_obj:
+                        out = resp_obj["output"]
+                        if isinstance(out, list) and len(out) > 0:
+                            first = out[0]
+                            if isinstance(first, dict) and "content" in first:
+                                return first["content"]
+                    if "message" in resp_obj and isinstance(resp_obj["message"], dict):
+                        msg = resp_obj["message"]
+                        if "content" in msg:
+                            return msg["content"]
+                    # direct text
+                    if "text" in resp_obj and isinstance(resp_obj["text"], str):
+                        return resp_obj["text"]
+                # attribute access
+                if hasattr(resp_obj, "text"):
+                    return getattr(resp_obj, "text")
+                if hasattr(resp_obj, "choices"):
+                    try:
+                        ch = getattr(resp_obj, "choices")
+                        return ch[0]["message"]["content"]
+                    except Exception:
+                        pass
+                if hasattr(resp_obj, "candidates"):
+                    cand = getattr(resp_obj, "candidates")
+                    try:
+                        first = cand[0]
+                        if isinstance(first, dict) and "content" in first:
+                            return first["content"]
+                        if hasattr(first, "content"):
+                            return getattr(first, "content")
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+
+            # Fallback to string representation
+            return str(resp_obj)
+
+        # If the model looks like Gemini, try Google Generative AI client first
+        if "gemini" in model.lower():
+            try:
+                import google.generativeai as genai  # type: ignore
+            except Exception as exc:
+                raise RuntimeError("google.generativeai package not installed; install it to use Gemini models") from exc
+
+            # Configure API key if provided
+            gkey = os.getenv("GOOGLE_API_KEY") or os.getenv("GEN_API_KEY")
+            if gkey:
+                try:
+                    genai.configure(api_key=gkey)
+                except Exception:
+                    # some genai versions may use different config API; ignore if configure fails
+                    pass
+
+            # Try chat-style call, then text-generation style
+            try:
+                try:
+                    resp = genai.chat.create(
+                        model=model,
+                        messages=[
+                            {"author": "system", "content": system_prompt},
+                            {"author": "user", "content": prompt},
+                        ],
+                    )
+                except Exception:
+                    # fallback to generate_text-like API
+                    resp = genai.generate_text(model=model, prompt=system_prompt + "\n\n" + prompt)
+            except Exception as exc:
+                raise RuntimeError(f"Gemini LLM request failed: {exc}") from exc
+
+            content = _extract_text(resp).strip()
+
+            # Save to local history for debugging/inspection
+            self.response_history.append({"agent_id": agent.id, "prompt": prompt, "response": content})
+
+            return content
+
+        # Default: OpenAI-compatible flow
+        try:
+            import openai
+        except Exception as exc:
+            raise RuntimeError("openai package not installed; install with 'pip install openai' to use a real LLM") from exc
+
+        # Allow using environment variable for API key
+        api_key = os.getenv("OPENAI_API_KEY")
+        if api_key:
+            openai.api_key = api_key
+
+        try:
+            resp = openai.ChatCompletion.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt},
+                ],
+                max_tokens=700,
+                temperature=0.7,
+            )
+        except Exception as exc:
+            # Surface a helpful error for the simulator to catch and fallback
+            raise RuntimeError(f"LLM request failed: {exc}") from exc
+
+        content = _extract_text(resp).strip()
+
+        # Save to local history for debugging/inspection
+        self.response_history.append({"agent_id": agent.id, "prompt": prompt, "response": content})
+
+        return content
 
 
 def parse_agent_response(response: str) -> Dict[str, Any]:
