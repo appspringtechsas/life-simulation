@@ -10,9 +10,12 @@ setup(
     url="https://github.com/appspringtechsas/life-simulation",
     packages=find_packages(),
     python_requires=">=3.8",
-    install_requires=[],
+    install_requires=[
+        "openai>=0.27.0",
+    ],
     extras_require={
         "dev": ["pytest>=6.0", "pytest-cov"],
+        "gemini": ["google-genai>=0.2.0"],
     },
     classifiers=[
         "Development Status :: 4 - Beta",

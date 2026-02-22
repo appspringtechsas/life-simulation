@@ -156,38 +156,28 @@ to adapt. Good luck!"""
             # Fallback to string representation
             return str(resp_obj)
 
-        # If the model looks like Gemini, try Google Generative AI client first
+        # If the model looks like Gemini, try Google genai client (successor to google-generativeai)
         if "gemini" in model.lower():
             try:
-                import google.generativeai as genai  # type: ignore
+                import google.genai  # type: ignore
             except Exception as exc:
-                raise RuntimeError("google.generativeai package not installed; install it to use Gemini models") from exc
+                raise RuntimeError("google-genai package not installed; install with 'pip install .[gemini]' to use Gemini models") from exc
 
-            # Configure API key if provided
+            # Get API key
             gkey = os.getenv("GOOGLE_API_KEY") or os.getenv("GEN_API_KEY")
-            if gkey:
-                try:
-                    genai.configure(api_key=gkey)
-                except Exception:
-                    # some genai versions may use different config API; ignore if configure fails
-                    pass
+            if not gkey:
+                raise RuntimeError("GOOGLE_API_KEY or GEN_API_KEY environment variable not set")
 
-            # Try chat-style call, then text-generation style
+            # Use the new google-genai Client API
             try:
-                try:
-                    resp = genai.chat.create(
-                        model=model,
-                        messages=[
-                            {"author": "system", "content": system_prompt},
-                            {"author": "user", "content": prompt},
-                        ],
-                    )
-                except Exception:
-                    # fallback to generate_text-like API
-                    resp = genai.generate_text(model=model, prompt=system_prompt + "\n\n" + prompt)
+                client = google.genai.Client(api_key=gkey)
+                resp = client.models.generate_content(
+                    model=model,
+                    contents=system_prompt + "\n\n" + prompt,
+                )
             except Exception as exc:
-                raise RuntimeError(f"Gemini LLM request failed: {exc}") from exc
-
+                raise RuntimeError(f"Gemini API request failed: {exc}") from exc
+            
             content = _extract_text(resp).strip()
 
             # Save to local history for debugging/inspection
