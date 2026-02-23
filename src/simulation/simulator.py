@@ -81,13 +81,14 @@ class Simulator:
         # prompt = self.llm_agent.build_agent_prompt(agent, self.environment)
 
         # Call real LLM via LLMAgent, falling back to the internal simulator on error
-        try:
-            response = self.llm_agent.get_response(agent, self.environment, "gemini-2.0-flash")
-            time.sleep(15)
-        except Exception:
+        #try:
+        response = self.llm_agent.get_response(agent, self.environment, "microsoft/Phi-4-multimodal-instruct" )
+        time.sleep(15)
+        #except Exception:
             # If a real LLM is not configured or the request fails, fall back
             # to the deterministic local simulator to keep behavior predictable.
-            response = self._simulate_llm_response(agent)
+            #response = self._simulate_llm_response(agent)
+            
         
         # Parse response
         parsed = parse_agent_response(response)

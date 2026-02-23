@@ -3,10 +3,17 @@ from typing import Dict, List, Any, Optional, Tuple
 import json
 import re
 import os
+from dotenv import load_dotenv
+from azure.ai.inference import ChatCompletionsClient
+from azure.ai.inference.models import SystemMessage, UserMessage
+from azure.core.credentials import AzureKeyCredential
 
 from src.agents import Agent
 from src.environment import Environment
 from src.mcp import ToolRegistry
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 class LLMAgent:
@@ -103,6 +110,13 @@ to adapt. Good luck!"""
 
         # Helper to attempt many common response shapes (OpenAI, Gemini, genai, etc.)
         def _extract_text(resp_obj) -> str:
+            # handle new openai response format first
+            try:
+                if hasattr(resp_obj, "choices") and hasattr(resp_obj.choices[0], "message"):
+                    return resp_obj.choices[0].message.content
+            except Exception:
+                pass
+
             # dict-like access
             try:
                 if isinstance(resp_obj, dict):
@@ -137,7 +151,7 @@ to adapt. Good luck!"""
                 if hasattr(resp_obj, "choices"):
                     try:
                         ch = getattr(resp_obj, "choices")
-                        return ch[0]["message"]["content"]
+                        return ch[0].message.content
                     except Exception:
                         pass
                 if hasattr(resp_obj, "candidates"):
@@ -187,30 +201,44 @@ to adapt. Good luck!"""
 
         # Default: OpenAI-compatible flow
         try:
-            import openai
+            from azure.ai.inference import ChatCompletionsClient
         except Exception as exc:
             raise RuntimeError("openai package not installed; install with 'pip install openai' to use a real LLM") from exc
 
         # Allow using environment variable for API key
-        api_key = os.getenv("OPENAI_API_KEY")
-        if api_key:
-            openai.api_key = api_key
+        token = os.getenv("GITHUB_TOKEN")
+        # Allow using environment variable for API base URL
+        base_url = os.getenv("OPENAI_API_BASE")
+        
+        if not token:
+            raise RuntimeError("OPENAI_API_KEY environment variable not set")
+
+        endpoint = base_url
+        model_name = model
+
+
+        client = ChatCompletionsClient(
+            endpoint=endpoint,
+            credential=AzureKeyCredential(token),
+        )
 
         try:
-            resp = openai.ChatCompletion.create(
-                model=model,
+            response = client.complete(
                 messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": prompt},
+                    SystemMessage(content=system_prompt),
+                    UserMessage(prompt),
                 ],
-                max_tokens=700,
-                temperature=0.7,
+                temperature=1.0,
+                top_p=1.0,
+                max_tokens=1000,
+                model=model_name
             )
+            
         except Exception as exc:
             # Surface a helpful error for the simulator to catch and fallback
             raise RuntimeError(f"LLM request failed: {exc}") from exc
 
-        content = _extract_text(resp).strip()
+        content = _extract_text(response).strip()
 
         # Save to local history for debugging/inspection
         self.response_history.append({"agent_id": agent.id, "prompt": prompt, "response": content})
