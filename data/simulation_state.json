@@ -1,0 +1,288 @@
+{
+  "current_turn": 4,
+  "agents": {
+    "136d518a-c6c3-454f-bb0b-9e7df7f115b9": {
+      "id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "name": "Agent-136d518a",
+      "generation": 0,
+      "energy": 95.0,
+      "health": 100.0,
+      "resources": 0.0,
+      "status": "alive",
+      "parent_ids": [],
+      "children_ids": [],
+      "birth_turn": 0,
+      "death_turn": null,
+      "traits": {
+        "energy_efficiency": 1.0,
+        "health_resistance": 1.0,
+        "reproduction_cost": 1.0,
+        "resource_affinity": 1.0,
+        "cooperation_tendency": 0.5
+      },
+      "discovered_tools": [],
+      "memory": {}
+    }
+  },
+  "environment": {
+    "turn": 5,
+    "resources_available": 390.0,
+    "max_resources": 500.0,
+    "resource_growth_rate": 10.0,
+    "temperature": 20.0,
+    "hazard_level": 0.0,
+    "fertility_rate": 1.0,
+    "max_agents": 1,
+    "events": []
+  },
+  "events": [
+    {
+      "turn": 0,
+      "timestamp": "2026-02-22T23:50:07.080180",
+      "event_type": "birth",
+      "agent_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "agent_name": "Agent-136d518a",
+      "details": {
+        "parent_ids": []
+      }
+    },
+    {
+      "turn": 0,
+      "timestamp": "2026-02-22T23:50:30.239426",
+      "event_type": "tool_creation",
+      "agent_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "agent_name": "Agent-136d518a",
+      "details": {
+        "tool_name": "custom_N/A_136d518a"
+      }
+    },
+    {
+      "turn": 1,
+      "timestamp": "2026-02-22T23:50:57.712874",
+      "event_type": "tool_creation",
+      "agent_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "agent_name": "Agent-136d518a",
+      "details": {
+        "tool_name": "custom_custom_proactive_gathering_strategy (to improve future resource gathering efficiency), custom_survival_kit (to carry essential items or tools for survival situations)_136d518a"
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "2026-02-22T23:51:27.653353",
+      "event_type": "tool_creation",
+      "agent_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "agent_name": "Agent-136d518a",
+      "details": {
+        "tool_name": "custom_custom_proactive_gathering_strategy, custom_survival_kit_136d518a_136d518a"
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "2026-02-22T23:51:27.653905",
+      "event_type": "tool_creation",
+      "agent_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "agent_name": "Agent-136d518a",
+      "details": {
+        "tool_name": "custom_This strategy will prepare me for survival in the short term while improving my capabilities for the future. Once I have shared resources, I will reconsider reproduction._136d518a"
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "2026-02-22T23:52:01.957938",
+      "event_type": "tool_creation",
+      "agent_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "agent_name": "Agent-136d518a",
+      "details": {
+        "tool_name": "custom_custom_This strategy will prepare me for survival in the short term while improving my capabilities for the future_136d518a, custom_custom_proactive_gathering_strategy_136d518a_136d518a"
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "2026-02-22T23:52:01.958722",
+      "event_type": "tool_creation",
+      "agent_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "agent_name": "Agent-136d518a",
+      "details": {
+        "tool_name": "custom_The actions taken will help in resource accumulation, maintaining health, and strategically planning for the future, which includes improvement in resource gathering efficiency and other survival aspects. The creation of new custom tools aims to optimize these aspects for better long-term survival. Reproduction may be considered once the current strategy has been successfully executed and resources have accumulated._136d518a"
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "2026-02-22T23:52:33.699949",
+      "event_type": "tool_creation",
+      "agent_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "agent_name": "Agent-136d518a",
+      "details": {
+        "tool_name": "custom_custom_custom_proactive_gathering_strategy_136d518a, custom_This strategy will prepare me for survival in the short term while improving my capabilities for the future_136d518a, custom_custom_proactive_gathering_strategy_136d518a_136d518a, custom_The actions taken will help in resource accumulation, maintaining health, and strategically planning for the future, which includes improvement in resource gathering efficiency and other survival aspects._136d518a, custom_136d518a, _136d518a_136d518a"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "name": "search_resources",
+      "description": "Search for resources in the environment",
+      "parameters": {
+        "search_radius": {
+          "type": "float",
+          "description": "Search radius"
+        },
+        "intensity": {
+          "type": "float",
+          "description": "Search intensity (0-1)"
+        }
+      },
+      "creator_id": null,
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "consume_energy",
+      "description": "Consume energy for actions",
+      "parameters": {
+        "amount": {
+          "type": "float",
+          "description": "Energy amount to consume"
+        }
+      },
+      "creator_id": null,
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "recover_health",
+      "description": "Recover health using resources",
+      "parameters": {
+        "resource_amount": {
+          "type": "float",
+          "description": "Resources to spend"
+        }
+      },
+      "creator_id": null,
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "help_offspring",
+      "description": "Help offspring with resources or health",
+      "parameters": {
+        "offspring_id": {
+          "type": "str",
+          "description": "ID of offspring"
+        },
+        "resource_transfer": {
+          "type": "float",
+          "description": "Resources to transfer"
+        },
+        "health_boost": {
+          "type": "float",
+          "description": "Health boost to give"
+        }
+      },
+      "creator_id": null,
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "help_parent",
+      "description": "Help parent with resources or health",
+      "parameters": {
+        "parent_id": {
+          "type": "str",
+          "description": "ID of parent"
+        },
+        "resource_transfer": {
+          "type": "float",
+          "description": "Resources to transfer"
+        }
+      },
+      "creator_id": null,
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "explore_new_tools",
+      "description": "Discover and learn new MCP tools",
+      "parameters": {
+        "exploration_effort": {
+          "type": "float",
+          "description": "Effort to explore (0-100)"
+        }
+      },
+      "creator_id": null,
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "get_agent_state",
+      "description": "Get current state of the agent",
+      "parameters": {},
+      "creator_id": null,
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "get_environment_state",
+      "description": "Get current state of the environment",
+      "parameters": {},
+      "creator_id": null,
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "custom_N/A_136d518a",
+      "description": "Custom tool created by Agent-136d518a",
+      "parameters": {},
+      "creator_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "custom_custom_proactive_gathering_strategy (to improve future resource gathering efficiency), custom_survival_kit (to carry essential items or tools for survival situations)_136d518a",
+      "description": "Custom tool created by Agent-136d518a",
+      "parameters": {},
+      "creator_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "custom_custom_proactive_gathering_strategy, custom_survival_kit_136d518a_136d518a",
+      "description": "Custom tool created by Agent-136d518a",
+      "parameters": {},
+      "creator_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "custom_This strategy will prepare me for survival in the short term while improving my capabilities for the future. Once I have shared resources, I will reconsider reproduction._136d518a",
+      "description": "Custom tool created by Agent-136d518a",
+      "parameters": {},
+      "creator_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "custom_custom_This strategy will prepare me for survival in the short term while improving my capabilities for the future_136d518a, custom_custom_proactive_gathering_strategy_136d518a_136d518a",
+      "description": "Custom tool created by Agent-136d518a",
+      "parameters": {},
+      "creator_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "custom_The actions taken will help in resource accumulation, maintaining health, and strategically planning for the future, which includes improvement in resource gathering efficiency and other survival aspects. The creation of new custom tools aims to optimize these aspects for better long-term survival. Reproduction may be considered once the current strategy has been successfully executed and resources have accumulated._136d518a",
+      "description": "Custom tool created by Agent-136d518a",
+      "parameters": {},
+      "creator_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "enabled": true,
+      "execution_count": 0
+    },
+    {
+      "name": "custom_custom_custom_proactive_gathering_strategy_136d518a, custom_This strategy will prepare me for survival in the short term while improving my capabilities for the future_136d518a, custom_custom_proactive_gathering_strategy_136d518a_136d518a, custom_The actions taken will help in resource accumulation, maintaining health, and strategically planning for the future, which includes improvement in resource gathering efficiency and other survival aspects._136d518a, custom_136d518a, _136d518a_136d518a",
+      "description": "Custom tool created by Agent-136d518a",
+      "parameters": {},
+      "creator_id": "136d518a-c6c3-454f-bb0b-9e7df7f115b9",
+      "enabled": true,
+      "execution_count": 0
+    }
+  ]
+}
