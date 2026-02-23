@@ -278,14 +278,14 @@ def parse_agent_response(response: str) -> Dict[str, Any]:
                            response, re.DOTALL)
     if tools_match:
         tools_text = tools_match.group(1).strip()
-        tools = [t.strip() for t in tools_text.split(",") if t.strip() and t.strip().lower() != "none"]
+        tools = [t.strip().lstrip("-").strip() for t in tools_text.split("\n") if t.strip() and t.strip().lower() != "none"]
         result["tools_to_use"] = tools
     
     new_tools_match = re.search(r"NEW_TOOLS_TO_CREATE:\s*(.+?)$", 
                                response, re.DOTALL)
     if new_tools_match:
         new_tools_text = new_tools_match.group(1).strip()
-        new_tools = [t.strip() for t in new_tools_text.split(",") if t.strip() and t.strip().lower() != "none"]
+        new_tools = [t.strip().lstrip("-").strip() for t in new_tools_text.split("\n") if t.strip() and t.strip().lower() != "none"]
         result["new_tools_to_create"] = new_tools
     
     return result

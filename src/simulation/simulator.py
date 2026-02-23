@@ -15,13 +15,13 @@ import time
 class Simulator:
     """Main simulation engine."""
     
-    def __init__(self, max_turns: int = 100, max_agents: int = 50):
+    def __init__(self, max_turns: int = 100, max_agents: int = 50, logging_dir: str = "logs"):
         """Initialize simulator."""
         self.max_turns = max_turns
         self.environment = Environment(max_agents=max_agents)
         self.agents: Dict[str, Agent] = {}
         self.tool_registry = ToolRegistry()
-        self.event_logger = EventLogger()
+        self.event_logger = EventLogger(logging_dir=logging_dir)
         self.llm_agent = LLMAgent(self.tool_registry)
         self.current_turn = 0
         self.execution_log: List[Dict[str, Any]] = []
@@ -69,6 +69,7 @@ class Simulator:
         Process one turn for an agent.
         Simulate LLM interaction and action execution.
         """
+        self.event_logger.log_info(f"Processing turn for agent {agent.name} ({agent.id})")
         turn_log = {
             "agent_id": agent.id,
             "agent_name": agent.name,
@@ -94,20 +95,24 @@ class Simulator:
         parsed = parse_agent_response(response)
         turn_log["reasoning"] = parsed["reasoning"]
         turn_log["actions"] = parsed["actions"]
+        self.event_logger.log_info(f"Agent {agent.name} reasoning: {parsed['reasoning']}")
         
         # Execute actions
         for action in parsed["actions"]:
             result = self._execute_action(agent, action)
+            self.event_logger.log_info(f"Agent {agent.name} action: {action} -> {result}")
             turn_log["results"].append(result)
         
         # Use tools
         for tool_name in parsed["tools_to_use"]:
             result = self._use_tool(agent, tool_name)
+            self.event_logger.log_info(f"Agent {agent.name} used tool: {tool_name} -> {result}")
             turn_log["results"].append(result)
         
         # Create new tools if agent proposes any
         for new_tool_name in parsed["new_tools_to_create"]:
             result = self._create_custom_tool(agent, new_tool_name)
+            self.event_logger.log_info(f"Agent {agent.name} created tool: {new_tool_name} -> {result}")
             turn_log["results"].append(result)
         
         # Apply turn-based costs
@@ -125,6 +130,7 @@ class Simulator:
             agent.die(self.current_turn)
             self.remove_agent(agent.id, cause)
             turn_log["results"].append(f"Agent died from {cause}")
+            self.event_logger.log_info(f"Agent {agent.name} died from {cause}")
         
         return turn_log
     
@@ -311,12 +317,12 @@ ACTIONS:
             self.add_agent()
         
         if verbose:
-            print(f"\n{'='*60}")
-            print("LIFE SIMULATION STARTED")
-            print(f"{'='*60}")
-            print(f"Initial agents: {len(self.agents)}")
-            print(f"Max turns: {self.max_turns}")
-            print(f"Max agents: {self.environment.max_agents}\n")
+            self.event_logger.log_info(f"\n{'='*60}")
+            self.event_logger.log_info("LIFE SIMULATION STARTED")
+            self.event_logger.log_info(f"{'='*60}")
+            self.event_logger.log_info(f"Initial agents: {len(self.agents)}")
+            self.event_logger.log_info(f"Max turns: {self.max_turns}")
+            self.event_logger.log_info(f"Max agents: {self.environment.max_agents}\n")
         
         # Run simulation loop
         for turn in range(self.max_turns):
@@ -340,13 +346,13 @@ ACTIONS:
             
             # Print turn summary
             if verbose and turn % 10 == 0:
-                print(f"Turn {turn}: {len(self.get_living_agents())} agents alive, "
+                self.event_logger.log_info(f"Turn {turn}: {len(self.get_living_agents())} agents alive, "
                       f"resources: {self.environment.resources_available:.1f}")
             
             # Check if simulation should end
             if len(self.get_living_agents()) == 0:
                 if verbose:
-                    print(f"\nSimulation ended at turn {turn}: All agents dead")
+                    self.event_logger.log_info(f"\nSimulation ended at turn {turn}: All agents dead")
                 break
         
         return self.get_simulation_report()

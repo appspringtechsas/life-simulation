@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import List, Dict, Any, Optional
 from datetime import datetime
 import json
+import os
 
 
 @dataclass
@@ -20,9 +21,23 @@ class EventLog:
 class EventLogger:
     """Logger for simulation events."""
     
-    def __init__(self):
+    def __init__(self, logging_dir: str = "logs"):
         """Initialize event logger."""
         self.events: List[EventLog] = []
+        self.logging_dir = logging_dir
+        if not os.path.exists(self.logging_dir):
+            os.makedirs(self.logging_dir)
+
+    def log_info(self, message: str):
+        """Log an informational message to the console."""
+        print(message)
+        self.log_to_file(message)
+
+    def log_to_file(self, message: str):
+        """Append a message to the log file."""
+        log_file = os.path.join(self.logging_dir, "simulation.log")
+        with open(log_file, "a") as f:
+            f.write(f"{datetime.now().isoformat()} - {message}\n")
     
     def log_event(self, 
                  turn: int,
@@ -40,6 +55,7 @@ class EventLogger:
             details=details,
         )
         self.events.append(event)
+        self.log_to_file(f"Event: {event_type} for agent {agent_name} ({agent_id}) at turn {turn}. Details: {details}")
         return event
     
     def log_birth(self, turn: int, agent_id: str, agent_name: str, parent_ids: List[str]):
