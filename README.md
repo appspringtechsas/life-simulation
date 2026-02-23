@@ -29,6 +29,16 @@ A complete artificial life simulation system where autonomous agents navigate a 
 - **Custom Tool Creation**: Agents can define and create new tools
 - **Tool Management**: Enable/disable/remove tools dynamically
 - **Tool Execution Tracking**: Monitor tool usage and effectiveness
+- **Real-World Task Approval**: Agents propose real-world work (with costs), humans approve/reject proposals, agents submit evidence, humans validate and grant resources
+
+### Real-World Task Workflow
+Agents can now request resources through a human-in-the-loop approval system:
+- **Proposal Phase**: Agent proposes real-world work + proposed cost
+- **Approval Phase**: Human reviews and approves or rejects proposal
+- **Execution Phase**: Agent performs actual work (external process)
+- **Evidence Phase**: Agent submits proof/deliverables of completion
+- **Validation Phase**: Human reviews evidence and approves resource grant
+- **Reward Phase**: Agent receives resources upon evidence approval
 
 ### LLM Integration
 - **State-Based Prompts**: Agents receive complete state information
@@ -122,6 +132,63 @@ This will:
 - Run simulation for 50 turns
 - Save state to `data/simulation_state.json`
 - Save events to `data/events.json`
+
+### Run Complete Automatic Workflow (RECOMMENDED) ⭐
+
+**Terminal 1: Start the approval server**
+```bash
+python examples/run_with_approval_server.py
+```
+
+**Terminal 2: Run the simulation with automatic task execution**
+```bash
+python examples/automatic_task_workflow.py
+```
+
+**Browser: Approve tasks**
+```
+Open http://localhost:5000 and:
+1. Approve pending proposals (1-2 per turn)
+2. Approval evidence submissions automatically
+3. Watch agents receive resources
+```
+
+This provides the complete workflow:
+- Agents propose real-world work
+- You approve proposals via web UI
+- Simulator automatically executes tasks each turn ✨
+- Evidence appears for review
+- You approve evidence via web UI
+- Agents receive resources automatically
+
+For complete details, see [QUICK_FIX_GUIDE.md](QUICK_FIX_GUIDE.md).
+
+### Run Simulation with Real-World Task Approval Server
+
+```bash
+python examples/run_with_approval_server.py
+```
+
+This will:
+- Start a web approval server at http://localhost:5000
+- Run simulation where agents request real-world work
+- Provide a UI at http://localhost:5000 to approve/reject tasks and evidence
+- Grant agents resources when human approves evidence
+
+For full details, see [REAL_WORLD_TASKS.md](REAL_WORLD_TASKS.md) and [QUICK_START.md](QUICK_START.md).
+
+### Run Agent Task Execution Examples
+
+```bash
+python examples/agent_task_execution_example.py
+```
+
+This demonstrates how agents execute real-world tasks and generate evidence:
+- Simple task execution (no simulator)
+- Full workflow with simulator and manual approvals
+- Display of all supported task types
+
+For detailed information, see [AGENT_TASK_EXECUTION.md](AGENT_TASK_EXECUTION.md).
 
 ### Run Examples
 

@@ -12,6 +12,7 @@ setup(
     python_requires=">=3.8",
     install_requires=[
         "openai>=0.27.0",
+        "flask>=2.0.0",
     ],
     extras_require={
         "dev": ["pytest>=6.0", "pytest-cov"],

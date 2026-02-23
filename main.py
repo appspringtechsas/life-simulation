@@ -4,12 +4,20 @@ import json
 from pathlib import Path
 
 from src.simulation import Simulator
-
+from src.mcp.slack_approval import SlackApprovalServer
+from threading import Thread
 
 def main():
     """Run life simulation with default configuration."""
     # Create simulator
     simulator = Simulator(max_turns=5, max_agents=1, logging_dir="logs")
+        
+    server = SlackApprovalServer(host='0.0.0.0', port=5000)
+    
+    # run the Flask app in a separate thread so simulator continues
+    t = Thread(target=server.start, args=(simulator.tool_registry,), kwargs={'debug': False}, daemon=True)
+    t.start()
+    
     
     # Run simulation
     report = simulator.run_simulation(initial_agents=1)

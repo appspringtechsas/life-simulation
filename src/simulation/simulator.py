@@ -8,8 +8,8 @@ from src.agents import Agent
 from src.environment import Environment
 from src.mcp import MCPTool, ToolRegistry
 from src.llm import LLMAgent, parse_agent_response
+from src.agents.task_executor import TaskExecutor
 from .event_logger import EventLogger
-import time
 
 
 class Simulator:
@@ -23,6 +23,7 @@ class Simulator:
         self.tool_registry = ToolRegistry()
         self.event_logger = EventLogger(logging_dir=logging_dir)
         self.llm_agent = LLMAgent(self.tool_registry)
+        self.task_executor = TaskExecutor()
         self.current_turn = 0
         self.execution_log: List[Dict[str, Any]] = []
     
@@ -82,13 +83,13 @@ class Simulator:
         # prompt = self.llm_agent.build_agent_prompt(agent, self.environment)
 
         # Call real LLM via LLMAgent, falling back to the internal simulator on error
-        #try:
-        response = self.llm_agent.get_response(agent, self.environment, "microsoft/Phi-4-multimodal-instruct" )
-        time.sleep(15)
-        #except Exception:
+        try:
+            response = self.llm_agent.get_response(agent, self.environment, "microsoft/Phi-4-multimodal-instruct" )
+        except Exception as e:
             # If a real LLM is not configured or the request fails, fall back
             # to the deterministic local simulator to keep behavior predictable.
-            #response = self._simulate_llm_response(agent)
+            self.event_logger.log_info(f"LLM request failed ({e}), using fallback simulator")
+            response = self._simulate_llm_response(agent)
             
         
         # Parse response
@@ -252,14 +253,32 @@ ACTIONS:
         """Use an MCP tool."""
         if not self.tool_registry.execute_tool(tool_name):
             return f"Tool '{tool_name}' not available or not enabled"
-        
+
         agent.discovered_tools.append(tool_name)
-        
-        # Simulate tool effects
+
+        # For 'search_resources' we require real-world work and human approval
         if tool_name == "search_resources":
-            amount = random.uniform(20, 50)
-            agent.gain_resources(amount)
-            return f"Used search_resources tool, gained {amount:.1f} resources"
+            # Create a real-world task that must be approved by a human
+            # Propose cost based on agent's current need
+            proposed_cost = 30.0  # base reward for successful search
+            details = {
+                "requested_by": agent.id,
+                "agent_name": agent.name,
+                "purpose": "gather_physical_or_external_resources",
+                "requested_at_turn": self.current_turn,
+                "energy_level": agent.energy,
+                "health_level": agent.health,
+            }
+            task_id = self.tool_registry.create_real_world_task(
+                tool_name, 
+                agent.id, 
+                {
+                    "proposed_cost": proposed_cost,
+                    "expected_outcome": "Agent will create a webpage, send emails for permissions, or create a document to secure external resources.",
+                    **details
+                }
+            )
+            return f"Initiated real-world resource search (task {task_id}); pending human approval"
         
         elif tool_name == "recover_health":
             agent.health = min(100.0, agent.health + 25)
@@ -310,6 +329,35 @@ ACTIONS:
         
         return "discovery_failed"
     
+    def _execute_and_submit_approved_tasks(self):
+        """Execute approved tasks and submit evidence automatically."""
+        executing_tasks = self.tool_registry.get_executing_real_world_tasks()
+        
+        for task in executing_tasks:
+            task_id = task["id"]
+            agent_id = task["agent_id"]
+            expected_outcome = task["expected_outcome"]
+            agent = self.get_agent(agent_id)
+            
+            if not agent:
+                continue
+            
+            # Generate evidence by executing the task
+            evidence = self.task_executor.execute_task(
+                task_id,
+                expected_outcome,
+                agent_id,
+                agent.name
+            )
+            
+            if evidence:
+                # Submit evidence to registry
+                ok = self.tool_registry.submit_task_evidence(task_id, evidence)
+                if ok:
+                    self.event_logger.log_info(
+                        f"Task {task_id[:8]} executed and evidence submitted for {agent.name}"
+                    )
+    
     def run_simulation(self, initial_agents: int = 5, verbose: bool = True) -> Dict[str, Any]:
         """Run the complete simulation."""
         # Initialize agents
@@ -343,6 +391,24 @@ ACTIONS:
                 turn_log["agent_turns"].append(agent_turn)
             
             self.execution_log.append(turn_log)
+
+            # Execute approved tasks and submit evidence automatically
+            self._execute_and_submit_approved_tasks()
+
+            # After all agents act, process any approved real-world tasks and apply proposed costs
+            approved = self.tool_registry.get_and_clear_approved_tasks()
+            for task in approved:
+                # Grant the proposed cost to the agent who successfully completed the task
+                agent_id = task.get("agent_id")
+                target_agent = self.get_agent(agent_id)
+                proposed_cost = task.get("proposed_cost", 0)
+                if target_agent:
+                    target_agent.gain_resources(proposed_cost)
+                    self.event_logger.log_info(f"Applied approved real-world task {task['id']} -> granted {proposed_cost:.1f} resources to {target_agent.name}")
+                    # record in turn_log
+                    turn_log.setdefault("results", []).append(f"Approved task {task['id']}: granted {proposed_cost:.1f} resources to {target_agent.name}")
+                else:
+                    self.event_logger.log_info(f"Approved task {task['id']} but agent {agent_id} not found")
             
             # Print turn summary
             if verbose and turn % 10 == 0:
